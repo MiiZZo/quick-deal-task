@@ -7,7 +7,6 @@ import vue2Jsx from '@vitejs/plugin-vue2-jsx'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/quick-deal-task/',
   plugins: [
     vue2(),
     vue2Jsx(),
