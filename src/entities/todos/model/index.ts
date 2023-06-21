@@ -17,14 +17,14 @@ export const todosModel = {
         ]
     },
     mutations: {
-        set(state, todos) {
+        set(state: { todos: Todo[] }, todos: Todo[]) {
             console.log(todos)
             state.todos = todos
         },
-        add(state, title) {
+        add(state: { todos: Todo[] }, title: string) {
             state.todos = [...state.todos, { id: Math.random().toString(), title, isCompleted: false }]
         },
-        edit(state, editTodo) {
+        edit(state: { todos: Todo[] }, editTodo: Partial<Todo>) {
             state.todos = state.todos.map((todo) => {
                 if (todo.id === editTodo.id) {
                     return { ...todo, ...editTodo }
@@ -33,7 +33,7 @@ export const todosModel = {
                 return todo
             });
         },
-        remove(state, { id }) {
+        remove(state: { todos: Todo[] }, { id }: { id: string }) {
             state.todos = state.todos.filter((todo) => todo.id !== id)
         }
     },

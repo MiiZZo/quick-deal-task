@@ -8,9 +8,8 @@
     "importsNotUsedAsValues": "remove",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
   },
-
   "references": [
     {
       "path": "./tsconfig.config.json"
